@@ -10,8 +10,8 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
 
-    services: 
-      - name: PostgreSQL
+    services:
+      postgres:
         image: postgres:17
         env:
           POSTGRES_USER: alphaogilo
