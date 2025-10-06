@@ -22,5 +22,8 @@ server:
 test:
 	go test -v -cover ./...
 
+mock:
+	mockgen -destination db/mock/store.go -source db/sqlc/store.go Store
 
-.PHONY: createdb dropdb migrateup migratedown createmigration test server
+
+.PHONY: createdb dropdb migrateup migratedown createmigration test server mock
