@@ -14,7 +14,7 @@ createmigration:
 	migrate create -ext sql -dir ./db/migrations -seq ${NAME}
 
 sqlc:
-	sqlc generate
+	sqlc generate 
 
 server:
 	go run main.go
